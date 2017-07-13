@@ -9,9 +9,10 @@
   <strong>Email:</strong>
   <%= @user.email %>
 </p>
+
 <p>
   <strong>First Micropost:</strong>
-  <%= @first_micropost.content %>
+  <%= @first_micropost.try(:content) %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
